@@ -1,0 +1,38 @@
+version: "3.2"
+
+services:
+  asd:
+    image: aerospike/aerospike-server
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+      - "3002:3002"
+      - "3003:3003"
+    container_name: asd-dev
+    volumes:
+      - type: bind
+        source: ${PWD}/env/aerospike.conf
+        target: /opt/aerospike/etc/aerospike.conf
+      - type: bind
+        source: ${PWD}/udf/utils.lua
+        target: /opt/aerospike/usr/udf/lua/utils.lua
+    restart: always
+    entrypoint:
+      - "/usr/bin/asd"
+      - "--foreground"
+      - "--config-file"
+      - "/opt/aerospike/etc/aerospike.conf"
+    networks:
+      - aero_test
+  ast:
+    image: aerospike/aerospike-tools:latest
+    depends_on:
+      - asd
+    restart: "no"
+    entrypoint: [ "bash", "-c", "sleep 2 && echo 'create index ts_idx on test (Timestamp) numeric;' | aql -h asd" ]
+    networks:
+      - aero_test
+
+networks:
+  aero_test:
+    driver: bridge
