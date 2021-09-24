@@ -8,7 +8,7 @@ services:
       - "3001:3001"
       - "3002:3002"
       - "3003:3003"
-    container_name: asd-dev
+    container_name: asd-aero-test
     volumes:
       - type: bind
         source: ${PWD}/env/aerospike.conf
@@ -29,7 +29,7 @@ services:
     depends_on:
       - asd
     restart: "no"
-    entrypoint: [ "bash", "-c", "sleep 2 && echo 'create index ts_idx on test (Timestamp) numeric;' | aql -h asd" ]
+    entrypoint: [ "bash", "-c", "sleep 2 && echo 'create index ts_idx on test (Timestamp) numeric;' | aql -h asd-aero-test" ]
     networks:
       - aero_test
 

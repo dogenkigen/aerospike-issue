@@ -25,4 +25,4 @@ start-aerospike:
 run-benchmarks:
 	docker-compose up --build --force-recreate --remove-orphans --detach
 	sleep 5
-	go test -bench=. ./repository
+	go test -bench=. ./pkg/repository
