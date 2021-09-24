@@ -1,0 +1,36 @@
+# github.com/aerospike/aerospike-client-go/v5 v5.6.0
+## explicit
+github.com/aerospike/aerospike-client-go/v5
+github.com/aerospike/aerospike-client-go/v5/internal/atomic
+github.com/aerospike/aerospike-client-go/v5/internal/lua
+github.com/aerospike/aerospike-client-go/v5/internal/lua/resources
+github.com/aerospike/aerospike-client-go/v5/internal/particle_type
+github.com/aerospike/aerospike-client-go/v5/logger
+github.com/aerospike/aerospike-client-go/v5/pkg/bcrypt
+github.com/aerospike/aerospike-client-go/v5/pkg/ripemd160
+github.com/aerospike/aerospike-client-go/v5/types
+github.com/aerospike/aerospike-client-go/v5/types/rand
+github.com/aerospike/aerospike-client-go/v5/utils/buffer
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/google/uuid v1.3.0
+## explicit
+github.com/google/uuid
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/stretchr/testify v1.7.0
+## explicit
+github.com/stretchr/testify/assert
+github.com/stretchr/testify/require
+# github.com/yuin/gopher-lua v0.0.0-20210529063254-f4c35e4016d9
+## explicit
+github.com/yuin/gopher-lua
+github.com/yuin/gopher-lua/ast
+github.com/yuin/gopher-lua/parse
+github.com/yuin/gopher-lua/pm
+# golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+golang.org/x/sync/errgroup
+golang.org/x/sync/semaphore
+# gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+## explicit
+gopkg.in/yaml.v3
